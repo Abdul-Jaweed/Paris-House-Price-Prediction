@@ -1,0 +1,7 @@
+pymongo==4.2.0
+python-dotenv==0.21.0
+pandas
+PyYAML
+numpy
+scikit-learn
+mlflow==2.2.2
