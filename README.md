@@ -1,1 +1,1 @@
-# Paris-House-Price-Prediction
+# Paris House Price Prediction
