@@ -41,24 +41,29 @@ def data_ingestion():
     os.makedirs(BASE_DIR, exist_ok=True)
 
     # Fetch data from MongoDB
+    print("Loading data from MongoDB...")
     data = fetch_data_from_mongodb()
 
     # Split data into train and test sets
+    print("Performing  train test splits...")
     train_data, test_data = split_train_test_data(data)
 
     # Store the raw data as a CSV file in the "artifact/data_ingestion/feature_store" directory
+    print("Feature storing...")
     feature_store_path = os.path.join(BASE_DIR, FEATURE_STORE_DIR)
     os.makedirs(feature_store_path, exist_ok=True)
     file_name = os.path.join(feature_store_path, CSV_FILE_NAME)
     data.to_csv(file_name, index=False)
 
     # Store the train data as a CSV file in the "artifact/data_ingestion/dataset" directory
+    print("Train data storing...")
     dataset_path = os.path.join(BASE_DIR, DATASET_DIR)
     os.makedirs(dataset_path, exist_ok=True)
     train_file_name = os.path.join(dataset_path, TRAIN_CSV_FILE_NAME)
     train_data.to_csv(train_file_name, index=False)
 
     # Store the test data as a CSV file in the "artifact/data_ingestion/dataset" directory
+    print("Test data storing...")
     test_file_name = os.path.join(dataset_path, TEST_CSV_FILE_NAME)
     test_data.to_csv(test_file_name, index=False)
 
