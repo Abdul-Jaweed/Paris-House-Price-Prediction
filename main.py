@@ -3,6 +3,7 @@ from raw_data.data_fetch import fetch_data_from_mongodb
 from paris.components.data_ingestion import data_ingestion
 from paris.components.data_transformation import data_transformation
 from paris.components.model_trainer import model_trainer
+from paris.components.model_evaluation import model_evaluation
 
 if __name__ == '__main__':
     try:
@@ -16,6 +17,7 @@ if __name__ == '__main__':
         data_ingestion()
         data_transformation()
         model_trainer()
+        model_evaluation()
     
     except Exception as e:
         print(e)
