@@ -6,5 +6,6 @@ numpy
 scikit-learn
 mlflow==2.2.2
 prefect
+xgboost
 
 -e .

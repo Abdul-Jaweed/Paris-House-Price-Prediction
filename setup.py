@@ -16,7 +16,7 @@ def get_requirements() -> List[str]:
 
 
 REPO_NAME = "Paris-House-Price-Prediction"
-__version__ = "0.0.0"
+__version__ = "0.0.1"
 AUTHOR_USER_NAME = "Abdul-Jaweed"
 SRC_REPO = "paris"
 AUTHOR_EMAIL = "jdgaming7320@gmail.com"
