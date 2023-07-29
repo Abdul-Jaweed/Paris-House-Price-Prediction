@@ -28,7 +28,7 @@ def train_models(X_train, y_train):
         Ridge(alpha=1.0),
         Lasso(alpha=1.0),
         DecisionTreeRegressor(),
-        RandomForestRegressor(),
+        #RandomForestRegressor(),
         AdaBoostRegressor(),
         GradientBoostingRegressor(),
         BaggingRegressor(),
