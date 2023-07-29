@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Paris%20House%20Price%20Prediction/Paris-House-Price-Prediction/mlruns/0/6977ab5ad42e4f93a0e8401ba05516be/artifacts
+end_time: 1690663612531
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6977ab5ad42e4f93a0e8401ba05516be
+run_name: Model Evaluation
+run_uuid: 6977ab5ad42e4f93a0e8401ba05516be
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1690663612438
+status: 3
+tags: []
+user_id: Admin

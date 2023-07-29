@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Paris%20House%20Price%20Prediction/Paris-House-Price-Prediction/mlruns/0/91b19527c51742edaefd4bf2bf2d5aae/artifacts
+end_time: 1690663572967
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 91b19527c51742edaefd4bf2bf2d5aae
+run_name: LinearRegression
+run_uuid: 91b19527c51742edaefd4bf2bf2d5aae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1690663568496
+status: 3
+tags: []
+user_id: Admin

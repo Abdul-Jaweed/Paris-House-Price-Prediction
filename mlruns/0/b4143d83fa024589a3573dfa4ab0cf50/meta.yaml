@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Paris%20House%20Price%20Prediction/Paris-House-Price-Prediction/mlruns/0/b4143d83fa024589a3573dfa4ab0cf50/artifacts
+end_time: 1690663610282
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b4143d83fa024589a3573dfa4ab0cf50
+run_name: Ridge
+run_uuid: b4143d83fa024589a3573dfa4ab0cf50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1690663610218
+status: 3
+tags: []
+user_id: Admin

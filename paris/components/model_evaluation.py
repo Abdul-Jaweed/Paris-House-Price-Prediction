@@ -1,6 +1,8 @@
 import os
 import pickle
 import pandas as pd
+import mlflow
+from mlflow.tracking import MlflowClient
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import math
 
@@ -53,6 +55,15 @@ def model_evaluation():
                 "R2": r2
             }
 
+            # Log the evaluation metrics using MLflow
+            with mlflow.start_run(run_name=model_name):
+                mlflow.log_metrics({
+                    "MAE": mae,
+                    "MSE": mse,
+                    "RMSE": rmse,
+                    "R2": r2
+                })
+
         # Determine the best model based on the highest R2 score
         best_model = max(evaluation_results, key=lambda x: evaluation_results[x]["R2"])
 
@@ -74,10 +85,23 @@ def model_evaluation():
                         f"RMSE={metrics['RMSE']:.2f}, R2={metrics['R2']:.2f}\n")
             f.write(f"\nBest Model:\n{best_model} has the highest R2={evaluation_results[best_model]['R2']:.2f}")
 
-        # Save evaluation results as a DataFrame file
-        # eval_df = pd.DataFrame(evaluation_results).T
-        # eval_df_file = os.path.join(EVALUATION_DIR, "evaluation_results.pkl")
-        # eval_df.to_pickle(eval_df_file)
+        # Save evaluation results as a DataFrame file (if desired)
+        eval_df = pd.DataFrame(evaluation_results).T
+        eval_df_file = os.path.join(EVALUATION_DIR, "evaluation_results.pkl")
+        eval_df.to_pickle(eval_df_file)
+
+        # Log the evaluation results using MLflow
+        with mlflow.start_run(run_name="Model Evaluation"):
+            mlflow.log_artifact(eval_text_file)
+            mlflow.log_artifact(eval_df_file)
 
     except Exception as e:
         print(f"An error occurred during model evaluation: {e}")
+
+if __name__ == '__main__':
+    # Set the MLflow tracking URI to the local directory
+    mlflow.set_tracking_uri("file:./mlruns")
+    
+    # Start an MLflow run for model evaluation
+    with mlflow.start_run(run_name="Model Evaluation"):
+        model_evaluation()

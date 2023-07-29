@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Paris%20House%20Price%20Prediction/Paris-House-Price-Prediction/mlruns/0/d733309c2c6242f6aa8103c63f228561/artifacts
+end_time: 1690663586480
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d733309c2c6242f6aa8103c63f228561
+run_name: AdaBoostRegressor
+run_uuid: d733309c2c6242f6aa8103c63f228561
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1690663583072
+status: 3
+tags: []
+user_id: Admin

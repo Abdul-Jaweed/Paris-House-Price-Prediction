@@ -1,6 +1,8 @@
 import pandas as pd
 import os
 import pickle
+import mlflow
+from mlflow.tracking import MlflowClient
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import (
@@ -38,10 +40,15 @@ def train_models(X_train, y_train):
 
     trained_models = {}
     for algo in algorithms:
-        model_name = algo.__class__.__name__
-        print(f"Training {model_name}...")
-        algo.fit(X_train, y_train)
-        trained_models[model_name] = algo
+        with mlflow.start_run(run_name=algo.__class__.__name__):
+            mlflow.log_param("algorithm", algo.__class__.__name__)
+
+            print(f"Training {algo.__class__.__name__}...")
+            algo.fit(X_train, y_train)
+            trained_models[algo.__class__.__name__] = algo
+
+            # Log the trained model using MLflow
+            mlflow.sklearn.log_model(algo, algo.__class__.__name__)
 
     return trained_models
 
@@ -69,4 +76,9 @@ def model_trainer():
         print(f"An error occurred during model training: {e}")
 
 if __name__ == '__main__':
-    model_trainer()
+    # Set the MLflow tracking URI to the local directory
+    mlflow.set_tracking_uri("file:./mlruns")
+    
+    # Start an MLflow run for model training
+    with mlflow.start_run(run_name="Model Training"):
+        model_trainer()

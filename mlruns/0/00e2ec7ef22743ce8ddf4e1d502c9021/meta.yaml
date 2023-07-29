@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Paris%20House%20Price%20Prediction/Paris-House-Price-Prediction/mlruns/0/00e2ec7ef22743ce8ddf4e1d502c9021/artifacts
+end_time: 1690663609511
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 00e2ec7ef22743ce8ddf4e1d502c9021
+run_name: SVR
+run_uuid: 00e2ec7ef22743ce8ddf4e1d502c9021
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1690663602828
+status: 3
+tags: []
+user_id: Admin

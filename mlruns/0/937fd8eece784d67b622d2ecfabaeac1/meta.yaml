@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Paris%20House%20Price%20Prediction/Paris-House-Price-Prediction/mlruns/0/937fd8eece784d67b622d2ecfabaeac1/artifacts
+end_time: 1690663042978
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 937fd8eece784d67b622d2ecfabaeac1
+run_name: colorful-moose-443
+run_uuid: 937fd8eece784d67b622d2ecfabaeac1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1690663002734
+status: 3
+tags: []
+user_id: Admin

@@ -1,0 +1,19 @@
+artifact_path: BaggingRegressor
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.3.0
+mlflow_version: 2.2.2
+model_uuid: de153efe641443d0985fd457bd5ba549
+run_id: 6a310838c4584dd39f52acb41314c887
+utc_time_created: '2023-07-29 20:33:56.520571'

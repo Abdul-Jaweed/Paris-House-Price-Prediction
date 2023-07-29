@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Paris%20House%20Price%20Prediction/Paris-House-Price-Prediction/mlruns/0/0e01e616b3e24b4bbacbfc2d3b5c12e7/artifacts
+end_time: 1690663583035
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0e01e616b3e24b4bbacbfc2d3b5c12e7
+run_name: DecisionTreeRegressor
+run_uuid: 0e01e616b3e24b4bbacbfc2d3b5c12e7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1690663579591
+status: 3
+tags: []
+user_id: Admin
